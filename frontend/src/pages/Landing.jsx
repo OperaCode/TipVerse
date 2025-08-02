@@ -16,21 +16,14 @@ const Landing = () => {
   return (
     <div className="min-h-screen font-sans text-white bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e]">
       {/* Navbar */}
-      <nav className="fixed top-0 w-full z-20 px-6 py-4 backdrop-blur-md bg-white/5 border-b border-white/10 flex justify-between items-center">
+     <nav className="fixed top-0 w-full z-20 px-6 py-4 backdrop-blur-md bg-white/5 border-b border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
         <h1 className="text-2xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
           🧃 TipVerse
         </h1>
-        <div className="space-x-6 text-sm text-gray-300 flex items-center">
-          <a href="#hero" className="hover:text-white transition">
-            Home
-          </a>
-          <a href="#how" className="hover:text-white transition">
-            How It Works
-          </a>
-         
-          <a href="#benefits" className="hover:text-white transition">
-            Benefits
-          </a>
+        <div className="space-x-4 md:space-x-6 text-sm text-gray-300 flex flex-wrap justify-center md:justify-end items-center gap-y-2">
+          <a href="#hero" className="hover:text-white transition">Home</a>
+          <a href="#how" className="hover:text-white transition">How It Works</a>
+          <a href="#benefits" className="hover:text-white transition">Benefits</a>
           <div>
             <ConnectButton />
           </div>
