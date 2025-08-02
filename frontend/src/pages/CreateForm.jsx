@@ -56,7 +56,7 @@ const CreateForm = () => {
     <div className="flex min-h-screen bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white">
       <nav className="fixed top-0 w-full z-20 px-6 py-4 backdrop-blur-md bg-white/5 border-b border-white/10 flex justify-between items-center">
         <h1 className="text-2xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
-          🧃 GratiFI
+          🧃 TripVerse
         </h1>
         <div className="space-x-6 text-sm text-gray-300 flex items-center">
           <a href="/dashboard" className="hover:text-white transition">

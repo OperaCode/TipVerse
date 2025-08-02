@@ -18,7 +18,7 @@ const Landing = () => {
       {/* Navbar */}
       <nav className="fixed top-0 w-full z-20 px-6 py-4 backdrop-blur-md bg-white/5 border-b border-white/10 flex justify-between items-center">
         <h1 className="text-2xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
-          🧃 GratiFI
+          🧃 TipVerse
         </h1>
         <div className="space-x-6 text-sm text-gray-300 flex items-center">
           <a href="#hero" className="hover:text-white transition">
@@ -44,7 +44,7 @@ const Landing = () => {
             Send & Receive Tips with ❤️
           </h2>
           <p className="text-lg text-gray-300 mb-8">
-            GratiFI lets you receive ETH tips instantly. Create your TipJar,
+            TipVerse lets you receive ETH tips instantly. Create your TipJar,
             share your link, and let gratitude flow.
           </p>
           <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:brightness-110 transition text-white font-semibold py-3 px-6 rounded-full shadow-lg">
@@ -97,7 +97,7 @@ const Landing = () => {
           Start Receiving Gratitude
         </h3>
         <p className="mb-8 text-white">
-          Whether you're a creator, dev, or open-source builder — GratiFI helps
+          Whether you're a creator, dev, or open-source builder — TipVerse helps
           you get appreciated directly with ETH.
         </p>
         <button className="bg-white text-pink-600 font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition">
@@ -108,7 +108,7 @@ const Landing = () => {
       {/* Benefits */}
       <section id="benefits" className="py-20 px-6 bg-white/5 text-center">
         <h3 className="text-3xl font-bold mb-12 text-white">
-          Why Choose GratiFI?
+          Why Choose TipVerse?
         </h3>
         <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto text-left">
           {[
