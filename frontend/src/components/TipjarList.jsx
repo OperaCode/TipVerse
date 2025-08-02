@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import TipButton from "./TipButton";
 
 const TipJarList = () => {
   const [tipJars, setTipJars] = useState([]);
@@ -35,6 +36,7 @@ const TipJarList = () => {
           <p className="text-sm text-gray-500 break-all">
             Wallet: {jar.walletAddress}
           </p>
+          <TipButton recipient={jar.walletAddress}/> 
         </div>
       ))}
     </div>
