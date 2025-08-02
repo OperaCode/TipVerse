@@ -1,4 +1,4 @@
-// models/TipJar.js
+
 const mongoose = require('mongoose');
 
 const tipSchema = new mongoose.Schema({

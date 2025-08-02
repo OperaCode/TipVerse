@@ -1,6 +1,10 @@
-// controllers/createTipJar.js
+
 const TipJar = require('../models/tipjarModel');
 
+
+
+
+// to create tipjar
 const createTipJar = async (req, res) => {
   try {
     const { title, description, goalAmount, walletAddress } = req.body;
@@ -23,8 +27,7 @@ const createTipJar = async (req, res) => {
   }
 };
 
-
-// controllers/tipJarController.js
+// get all tipjars
 const getAllTipJars = async (req, res) => {
   try {
     const tipJars = await TipJar.find().sort({ createdAt: -1 });
@@ -34,7 +37,7 @@ const getAllTipJars = async (req, res) => {
   }
 };
 
-
+// add tip/pay to tipjar
 const addTip = async (req, res) => {
   try {
     const { tipJarId } = req.params;
@@ -66,5 +69,23 @@ const addTip = async (req, res) => {
 };
 
 
+const logOut = async (req,res)=>{
+try {
+ 
+    if (req.session) {
+      req.session.destroy((err) => {
+        if (err) return res.status(500).json({ error: "Logout failed." });
+        res.clearCookie("connect.sid"); 
+        return res.status(200).json({ message: "Logged out successfully" });
+      });
+    } else {
+  
+      return res.status(200).json({ message: "Logged out (JWT-based)" });
+    }
+  } catch (err) {
+    return res.status(500).json({ error: "Something went wrong during logout." });
+  }
+};
 
-module.exports = {createTipJar,getAllTipJars, addTip};
+
+module.exports = {createTipJar,getAllTipJars, addTip,logOut};
