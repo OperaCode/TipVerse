@@ -35,5 +35,30 @@ const getAllTipJars = async (req, res) => {
 };
 
 
+const addTip = async (req, res) => {
+  try {
+    const { tipJarId } = req.params;
+    const { amount, fromWallet } = req.body;
 
-module.exports = {createTipJar,getAllTipJars};
+    if (!amount || !fromWallet) {
+      return res.status(400).json({ error: "Amount and sender wallet are required." });
+    }
+
+    const tipJar = await TipJar.findById(tipJarId);
+    if (!tipJar) {
+      return res.status(404).json({ error: "Tip jar not found." });
+    }
+
+    tipJar.tips.push({ amount, fromWallet });
+    await tipJar.save();
+
+    res.status(200).json({ success: true, message: "Tip added!", tipJar });
+  } catch (error) {
+    console.error("Error adding tip:", error);
+    res.status(500).json({ error: "Server error" });
+  }
+};
+
+
+
+module.exports = {createTipJar,getAllTipJars, addTip};
