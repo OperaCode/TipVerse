@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useAccount } from "wagmi";
+import { Menu, X, MessageCircle, Zap, User, Rocket, Twitter, Github, Linkedin } from "lucide-react";
 
 const Landing = () => {
   const navigate = useNavigate();
@@ -135,16 +136,16 @@ const Landing = () => {
       <footer className="py-10 px-6 bg-[#121212] text-center text-sm text-gray-500">
         <p>Made with 💙 by Opera</p>
         
-        <div className="mt-4 space-x-4">
-          <a href="#" className="hover:underline">
-            Twitter
-          </a>
-          <a href="#" className="hover:underline">
-            GitHub
-          </a>
-          <a href="#" className="hover:underline">
-            Support
-          </a>
+        <div className="mt-4 space-x-4 flex m-auto justify-center">
+         <a href="https://x.com/OperaFaboyinde" target="_blank" className="hover:text-indigo-100 transition-colors">
+              <Twitter size={24} />
+            </a>
+            <a href="https://github.com/OperaCode" target="_blank" className="hover:text-indigo-100 transition-colors">
+              <Github size={24} />
+            </a>
+            <a href="https://www.linkedin.com/in/raphael-faboyinde-a031b1195/" target="_blank" className="hover:text-indigo-100 transition-colors">
+              <Linkedin size={24} />
+            </a>
         </div>
       </footer>
     </div>
